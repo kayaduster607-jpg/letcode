@@ -1,0 +1,16 @@
+services:
+  hot100:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hot100
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    environment:
+      NODE_ENV: production
+      HOSTNAME: 0.0.0.0
+      PORT: 3001
+      VIDEO_PRESENTATION_ROOT: /app/ship
+    volumes:
+      - ./data:/app/data

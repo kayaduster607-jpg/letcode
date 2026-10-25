@@ -1,0 +1,39 @@
+# Never publish credentials, sessions, learning notes or synthesis logs.
+.env
+.env.*
+**/.env*
+/data/
+/tts-logs/
+*.pem
+*.key
+
+# Generated assets are reproducible from scripts and may contain private audio.
+/ship/
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local tooling, reference material, archives and rendered documents.
+.claude/
+.idea/
+.vscode/
+/leetcode-master/
+/代码随想录算法PDF/
+/github-readme-writer/
+/.npmrc
+/docs/τ*.md
+*.zip
+*.tar.gz
+*.doc
+*.docx
+*.pdf
+/docs/rendered-*/
+*.log
+.DS_Store
+Thumbs.db

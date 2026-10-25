@@ -1,0 +1,983 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --soft: #94a3b8;
+  --border: #e2e8f0;
+  --blue: #2563eb;
+  --blue-dark: #1d4ed8;
+  --green: #059669;
+  --amber: #d97706;
+  --red: #dc2626;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+a { color: inherit; text-decoration: none; }
+button, input, textarea { font: inherit; }
+code, pre { font-family: "JetBrains Mono", "Fira Code", Consolas, Monaco, monospace; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+.line-clamp-1, .one-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* App shell */
+.app-shell {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--bg);
+}
+.app-main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: clamp(14px, 1.6vw, 30px) clamp(14px, 2vw, 36px) clamp(36px, 4vw, 64px);
+}
+.app-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 22vw);
+  gap: clamp(16px, 1.6vw, 30px);
+  align-items: start;
+}
+.app-content { min-width: 0; width: 100%; }
+.app-aside { min-width: 0; width: 100%; position: sticky; top: 88px; }
+
+/* Navbar */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid rgba(226, 232, 240, .9);
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(14px);
+}
+.nav-inner {
+  width: 100%;
+  max-width: none;
+  height: 64px;
+  margin: 0;
+  padding: 0 clamp(14px, 2vw, 36px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.brand-logo {
+  width: 40px; height: 40px; border-radius: 14px;
+  display: grid; place-items: center;
+  color: white; font-weight: 900;
+  background: linear-gradient(135deg, #2563eb, #4338ca);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, .22);
+  flex: 0 0 auto;
+}
+.brand-title { font-size: 18px; font-weight: 900; line-height: 1.1; }
+.brand-subtitle { margin-top: 3px; color: var(--soft); font-size: 12px; }
+.nav-links {
+  display: flex; align-items: center; gap: 6px;
+  border-radius: 16px; padding: 5px;
+  background: #f1f5f9;
+  flex: 0 0 auto;
+}
+.nav-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 13px; border-radius: 12px;
+  color: #64748b; font-size: 14px; font-weight: 800;
+  transition: .18s ease;
+}
+.nav-link:hover { background: rgba(255,255,255,.75); color: #0f172a; }
+.nav-link.active { background: #fff; color: #1d4ed8; box-shadow: 0 1px 4px rgba(15,23,42,.08); }
+
+/* Home */
+.home-stack { display: grid; gap: 22px; }
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 244px;
+  border-radius: 32px;
+  padding: 30px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 76% 18%, rgba(255,255,255,.2), transparent 26%),
+    radial-gradient(circle at 8% 88%, rgba(96,165,250,.28), transparent 34%),
+    linear-gradient(135deg, #2563eb 0%, #4338ca 58%, #312e81 100%);
+  box-shadow: 0 24px 50px rgba(37, 99, 235, .18);
+}
+.home-hero::after {
+  content: "";
+  position: absolute;
+  right: -70px; bottom: -80px;
+  width: 260px; height: 260px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.1);
+}
+.hero-layout {
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 28vw);
+  gap: clamp(18px, 2vw, 36px);
+  align-items: center;
+}
+.hero-kicker {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.2);
+  font-size: 13px; font-weight: 800;
+}
+.hero-kicker-dot { width: 8px; height: 8px; border-radius: 999px; background: #86efac; }
+.hero-title {
+  margin-top: 18px;
+  max-width: 760px;
+  font-size: clamp(32px, 4vw, 54px);
+  line-height: 1.04;
+  letter-spacing: -1.2px;
+  font-weight: 950;
+}
+.hero-desc {
+  margin-top: 14px;
+  max-width: 760px;
+  color: #dbeafe;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.metric-card {
+  min-width: 0;
+  border-radius: 20px;
+  padding: 16px 10px;
+  text-align: center;
+  background: rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(10px);
+}
+.metric-value { font-size: 26px; line-height: 1; font-weight: 950; }
+.metric-label { margin-top: 8px; color: #dbeafe; font-size: 12px; font-weight: 700; }
+.hero-progress-card {
+  grid-column: 1 / -1;
+  border-radius: 20px;
+  padding: 16px;
+  background: rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,.18);
+}
+.hero-progress-top {
+  display: flex; justify-content: space-between; align-items: center;
+  color: #dbeafe; font-size: 13px; font-weight: 800;
+}
+.hero-progress-track { margin-top: 10px; height: 9px; overflow: hidden; border-radius: 999px; background: rgba(255,255,255,.18); }
+.hero-progress-fill { height: 100%; border-radius: inherit; background: #fff; transition: width .35s ease; }
+
+.home-dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: clamp(12px, 1.2vw, 18px); }
+.dashboard-card, .side-card, .today-card, .stage-card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: 0 10px 24px rgba(15,23,42,.04);
+}
+.dashboard-card { border-radius: 24px; padding: 20px; min-width: 0; }
+.dashboard-label { color: #94a3b8; font-size: 12px; font-weight: 900; letter-spacing: .06em; }
+.dashboard-value { margin-top: 8px; color: #0f172a; font-size: 21px; font-weight: 950; }
+.dashboard-desc { margin-top: 4px; color: #64748b; font-size: 14px; }
+
+.side-stack { display: grid; gap: 16px; }
+.side-card { border-radius: 24px; padding: 20px; }
+.side-title { margin-bottom: 16px; font-size: 16px; font-weight: 950; }
+.overview-row { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; }
+.ring-wrap { position: relative; width: 76px; height: 76px; flex: 0 0 auto; }
+.ring-wrap svg { width: 76px; height: 76px; transform: rotate(-90deg); }
+.ring-center { position: absolute; inset: 0; display: grid; place-items: center; font-size: 18px; font-weight: 950; }
+.overview-num { font-size: 30px; line-height: 1; font-weight: 950; }
+.overview-num span { color: #94a3b8; font-size: 15px; }
+.overview-label { margin-top: 5px; color: #64748b; font-size: 13px; }
+.mini-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.mini-stat { border-radius: 16px; padding: 12px; background: #f8fafc; border: 1px solid #f1f5f9; }
+.mini-label { color: #64748b; font-size: 12px; }
+.mini-value { margin-top: 5px; font-size: 18px; font-weight: 950; }
+.quick-link { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 16px; transition: .18s ease; }
+.quick-link:hover { background: #f8fafc; }
+.quick-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 14px; background: #eff6ff; flex: 0 0 auto; }
+.quick-title { font-weight: 900; }
+.quick-desc { margin-top: 2px; color: #64748b; font-size: 12px; }
+.advice-card { border-color: #fde68a; background: linear-gradient(135deg, #fffbeb, #fff7ed); color: #92400e; }
+.advice-title { margin-bottom: 8px; font-weight: 950; }
+.advice-text { font-size: 14px; line-height: 1.7; }
+
+.today-card { overflow: hidden; border-radius: 28px; }
+.today-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 28%); }
+.today-main { padding: 26px; }
+.today-steps { padding: 24px; background: #f8fafc; border-left: 1px solid #f1f5f9; }
+.pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.pill { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 6px 10px; font-size: 12px; font-weight: 900; }
+.pill-blue { color: #1d4ed8; background: #eff6ff; border: 1px solid #dbeafe; }
+.pill-gray { color: #64748b; background: #f1f5f9; }
+.pill-green { color: #047857; background: #ecfdf5; border: 1px solid #a7f3d0; }
+.pill-amber { color: #b45309; background: #fffbeb; border: 1px solid #fde68a; }
+.pill-red { color: #b91c1c; background: #fef2f2; border: 1px solid #fecaca; }
+.problem-head { display: flex; align-items: flex-start; gap: 16px; }
+.problem-icon { width: 58px; height: 58px; border-radius: 20px; display: grid; place-items: center; background: #eff6ff; font-size: 25px; flex: 0 0 auto; }
+.problem-title { font-size: clamp(28px, 3vw, 40px); line-height: 1.12; font-weight: 950; letter-spacing: -.6px; }
+.problem-en { margin-top: 5px; color: #64748b; font-size: 14px; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.tag { border-radius: 12px; padding: 7px 10px; color: #475569; background: #f1f5f9; font-size: 12px; font-weight: 800; }
+.goal-box { margin-top: 20px; border-radius: 18px; padding: 16px; background: #f8fafc; border: 1px solid #f1f5f9; }
+.goal-title { margin-bottom: 8px; font-size: 14px; font-weight: 950; }
+.goal-text { color: #475569; font-size: 14px; line-height: 1.8; }
+.step-titlebar { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.step-title { font-size: 14px; font-weight: 950; }
+.step-subtitle { color: #94a3b8; font-size: 12px; font-weight: 800; }
+.steps-list { display: grid; gap: 12px; }
+.step-item { display: flex; gap: 10px; }
+.step-num { width: 28px; height: 28px; border-radius: 10px; display: grid; place-items: center; color: #1d4ed8; background: #fff; border: 1px solid #dbeafe; font-size: 12px; font-weight: 950; flex: 0 0 auto; }
+.step-name { color: #0f172a; font-size: 14px; font-weight: 900; }
+.step-desc { margin-top: 2px; color: #64748b; font-size: 12px; line-height: 1.55; }
+.today-actions { display: flex; gap: 12px; padding: 18px 26px; border-top: 1px solid #f1f5f9; }
+.primary-btn, .secondary-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 46px; border-radius: 16px; padding: 0 18px;
+  font-weight: 950; transition: .18s ease;
+}
+.primary-btn { flex: 1; color: #fff; background: var(--blue); box-shadow: 0 12px 24px rgba(37,99,235,.18); }
+.primary-btn:hover { background: var(--blue-dark); }
+.secondary-btn { color: #475569; background: #fff; border: 1px solid var(--border); }
+.secondary-btn:hover { background: #f8fafc; }
+.empty-card { border-radius: 28px; padding: 36px; text-align: center; border: 1px solid #a7f3d0; background: #fff; }
+.empty-icon { margin: 0 auto 14px; width: 64px; height: 64px; display: grid; place-items: center; border-radius: 22px; background: #ecfdf5; font-size: 30px; }
+.empty-title { font-size: 21px; font-weight: 950; }
+.empty-desc { margin-top: 6px; color: #64748b; font-size: 14px; }
+
+.stage-section { display: grid; gap: 16px; }
+.section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; }
+.section-title { font-size: 22px; font-weight: 950; }
+.section-desc { margin-top: 5px; color: #64748b; font-size: 14px; }
+.section-link { color: #2563eb; font-size: 14px; font-weight: 900; white-space: nowrap; }
+.stage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(12px, 1.2vw, 18px); }
+.stage-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 170px;
+  border-radius: 24px;
+  padding: 18px;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.stage-card:hover { transform: translateY(-2px); border-color: #bfdbfe; box-shadow: 0 18px 32px rgba(15,23,42,.08); }
+.stage-card.disabled { border-style: dashed; opacity: .72; }
+.stage-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.stage-index { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 14px; background: #eff6ff; color: #1d4ed8; font-weight: 950; }
+.stage-status { color: #94a3b8; font-size: 12px; font-weight: 900; }
+.stage-name { margin-top: 14px; font-size: 18px; font-weight: 950; }
+.stage-desc { margin-top: 5px; min-height: 40px; color: #64748b; font-size: 13px; line-height: 1.55; }
+.stage-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.stage-tag { border-radius: 10px; padding: 5px 8px; color: #64748b; background: #f8fafc; font-size: 11px; font-weight: 800; }
+.stage-progress { margin-top: 14px; height: 7px; overflow: hidden; border-radius: 999px; background: #f1f5f9; }
+.stage-progress > span { display: block; height: 100%; border-radius: inherit; background: #2563eb; }
+.stage-action { margin-top: 10px; color: #2563eb; font-size: 13px; font-weight: 900; }
+
+/* Learn page supplemental fixes */
+.learn-layout-fix { width: 100%; }
+
+@media (max-width: 1180px) {
+  .app-layout, .hero-layout, .today-grid { grid-template-columns: 1fr; }
+  .app-aside { position: static; }
+  .today-steps { border-left: 0; border-top: 1px solid #f1f5f9; }
+
+}
+@media (max-width: 760px) {
+  .app-main { padding-inline: 14px; }
+  .nav-inner { height: auto; padding: 12px 14px; align-items: flex-start; flex-direction: column; }
+  .nav-links { width: 100%; justify-content: space-between; }
+  .nav-link { flex: 1; justify-content: center; padding-inline: 8px; }
+  .home-hero { border-radius: 24px; padding: 22px; min-height: auto; }
+  .hero-metrics, .home-dashboard, .stage-grid, .mini-grid { grid-template-columns: 1fr; }
+  .today-actions { flex-direction: column; }
+  .problem-head { flex-direction: column; }
+}
+
+/* Shared readable page layouts: keep containers responsive but give text enough breathing room. */
+.content-page {
+  display: grid;
+  gap: clamp(20px, 1.6vw, 32px);
+  width: 100%;
+}
+.page-hero-card,
+.page-filter-card,
+.progress-card-readable,
+.route-stage-card,
+.empty-state-card,
+.wrong-card,
+.study-card,
+.problem-title-panel,
+.study-sidebar-card {
+  border-radius: clamp(22px, 1.5vw, 32px) !important;
+}
+.page-hero-card {
+  padding: clamp(24px, 2.2vw, 42px) !important;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(37, 99, 235, .08), transparent 32%),
+    #fff;
+  border: 1px solid var(--border);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, .05);
+}
+.page-hero-card h1,
+.problem-title-panel h1 {
+  font-size: clamp(30px, 2.5vw, 44px) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -.7px;
+  font-weight: 950 !important;
+}
+.page-copy,
+.readable-text,
+.route-stage-note,
+.problem-page p,
+.learn-page p,
+.wrong-book-page p {
+  font-size: clamp(15px, .88vw, 17px) !important;
+  line-height: 1.85 !important;
+}
+.page-filter-card,
+.progress-card-readable,
+.route-stage-card,
+.study-card,
+.problem-title-panel,
+.empty-state-card,
+.wrong-card-body,
+.study-sidebar-card {
+  padding: clamp(22px, 1.8vw, 36px) !important;
+}
+.page-filter-card input {
+  min-height: 50px;
+  font-size: clamp(14px, .86vw, 16px) !important;
+  line-height: 1.5 !important;
+}
+.segmented-control {
+  gap: 6px !important;
+  padding: 6px !important;
+}
+.segmented-control button {
+  min-height: 40px;
+  padding-inline: 14px !important;
+  font-size: 13px !important;
+}
+.page-stat {
+  padding: clamp(16px, 1.2vw, 22px) !important;
+}
+.page-stat > div:first-child {
+  font-size: clamp(22px, 1.6vw, 30px) !important;
+}
+.route-stage-card {
+  overflow: visible !important;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .045) !important;
+}
+.route-stage-card h2 {
+  font-size: clamp(22px, 1.5vw, 28px) !important;
+  line-height: 1.25 !important;
+}
+.route-stage-card .route-problem-list {
+  padding: clamp(12px, 1vw, 18px) !important;
+}
+.problem-list-item {
+  padding: clamp(16px, 1.15vw, 22px) !important;
+  gap: 16px !important;
+}
+.problem-list-item .truncate {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  line-height: 1.35 !important;
+}
+.problem-list-item .text-xs,
+.learn-page .text-xs,
+.wrong-book-page .text-xs,
+.problem-page .text-xs {
+  line-height: 1.55 !important;
+}
+
+/* Problem detail page */
+.problem-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 21vw);
+  gap: clamp(22px, 2vw, 40px) !important;
+  align-items: start;
+}
+.problem-main {
+  display: grid;
+  gap: clamp(20px, 1.5vw, 30px) !important;
+  min-width: 0;
+}
+.problem-title-panel {
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .045);
+}
+.problem-title-panel > div:last-child,
+.problem-title-panel .flex-wrap,
+.wrong-card-title-row,
+.wrong-card-top,
+.wrong-reason-row {
+  min-width: 0;
+}
+.study-card {
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .045) !important;
+}
+.study-card h2,
+.methodology-card h3,
+.study-sidebar-card .text-lg {
+  font-size: clamp(18px, 1.12vw, 22px) !important;
+  line-height: 1.35 !important;
+}
+.study-card .p-6,
+.methodology-body,
+.study-card > .p-6 {
+  padding: clamp(20px, 1.6vw, 32px) !important;
+}
+.study-card .px-6 {
+  padding-left: clamp(20px, 1.6vw, 32px) !important;
+  padding-right: clamp(20px, 1.6vw, 32px) !important;
+}
+.study-card .py-4 {
+  padding-top: clamp(16px, 1.1vw, 22px) !important;
+  padding-bottom: clamp(16px, 1.1vw, 22px) !important;
+}
+.readable-box {
+  padding: clamp(16px, 1.2vw, 22px) !important;
+  font-size: clamp(15px, .88vw, 17px) !important;
+  line-height: 1.85 !important;
+  border-radius: 16px !important;
+}
+.guided-step-button {
+  padding: clamp(16px, 1.15vw, 22px) !important;
+  gap: 16px !important;
+}
+.guided-step-content {
+  padding-right: clamp(16px, 1.2vw, 24px) !important;
+  padding-bottom: clamp(16px, 1.2vw, 24px) !important;
+}
+.guided-step-content p,
+.methodology-card .text-xs,
+.methodology-card .text-sm {
+  line-height: 1.78 !important;
+}
+.code-block pre {
+  padding: clamp(16px, 1.3vw, 24px) !important;
+}
+.code-block code {
+  font-size: clamp(13px, .82vw, 15px) !important;
+  line-height: 1.85 !important;
+}
+.problem-aside {
+  width: auto !important;
+  min-width: 0;
+}
+.problem-aside .space-y-4,
+.problem-aside .xl\:sticky {
+  display: grid;
+  gap: clamp(14px, 1vw, 20px) !important;
+}
+.study-sidebar-card {
+  padding: clamp(18px, 1.3vw, 26px) !important;
+}
+.study-sidebar-nav {
+  padding: 12px !important;
+}
+
+/* Wrong book page */
+.wrong-filter-tabs {
+  flex-wrap: wrap;
+  gap: 10px !important;
+}
+.wrong-filter-tabs button {
+  min-height: 42px;
+  padding-inline: 18px !important;
+  font-weight: 800 !important;
+}
+.wrong-card {
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .045) !important;
+}
+.wrong-card-top {
+  align-items: flex-start !important;
+  gap: 16px !important;
+}
+.wrong-card-title-row {
+  flex-wrap: wrap;
+  gap: 10px !important;
+}
+.wrong-card-title-row a {
+  font-size: clamp(17px, 1.05vw, 20px);
+  line-height: 1.35;
+}
+.wrong-reason-row input {
+  min-height: 48px;
+  font-size: clamp(14px, .86vw, 16px) !important;
+  line-height: 1.6 !important;
+}
+
+@media (max-width: 1180px) {
+  .problem-layout {
+    grid-template-columns: 1fr !important;
+  }
+  .problem-aside .space-y-4,
+  .problem-aside .xl\:sticky {
+    position: static !important;
+  }
+}
+@media (max-width: 760px) {
+  .page-hero-card,
+  .page-filter-card,
+  .progress-card-readable,
+  .route-stage-card,
+  .study-card,
+  .problem-title-panel,
+  .empty-state-card,
+  .wrong-card-body,
+  .study-sidebar-card {
+    padding: 18px !important;
+    border-radius: 22px !important;
+  }
+  .wrong-card-top,
+  .wrong-reason-row {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+  .problem-list-item {
+    padding: 16px !important;
+  }
+  .guided-step-content {
+    margin-left: 0 !important;
+    padding-left: 18px !important;
+  }
+}
+
+/* Keep sectional cards visually clean after spacing expansion. */
+.route-stage-card,
+.study-card.overflow-hidden,
+.methodology-card {
+  padding: 0 !important;
+}
+.route-stage-card > div:first-child {
+  padding: clamp(22px, 1.8vw, 36px) !important;
+}
+.route-stage-card .route-stage-note {
+  padding: clamp(18px, 1.3vw, 26px) clamp(22px, 1.8vw, 36px) !important;
+}
+.methodology-card > div:first-child,
+.study-card.overflow-hidden > div:first-child {
+  padding-left: clamp(20px, 1.6vw, 32px) !important;
+  padding-right: clamp(20px, 1.6vw, 32px) !important;
+}
+
+/* QA polish: standardize typography, cap reading width, and make problem pages feel like a learning workspace. */
+:root {
+  --font-sans: Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", sans-serif;
+  --font-code: Consolas, "SFMono-Regular", "Liberation Mono", Menlo, Monaco, monospace;
+}
+
+body {
+  font-family: var(--font-sans) !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+code,
+pre {
+  font-family: var(--font-code) !important;
+}
+
+.app-main {
+  max-width: 1520px !important;
+  margin: 0 auto !important;
+}
+
+.problem-layout {
+  grid-template-columns: minmax(0, 980px) 320px !important;
+  justify-content: center !important;
+  gap: 24px !important;
+}
+
+@media (min-width: 1600px) {
+  .problem-layout {
+    grid-template-columns: minmax(0, 1040px) 340px !important;
+  }
+}
+
+.problem-main {
+  gap: 22px !important;
+}
+
+.problem-page .font-black,
+.problem-page .font-extrabold {
+  font-weight: 700 !important;
+}
+
+.problem-page p,
+.problem-page li,
+.problem-page button,
+.problem-page input,
+.problem-page textarea,
+.problem-page .readable-box,
+.problem-page .answer-box,
+.problem-page .process-list,
+.problem-page .post-solve-card {
+  font-size: 15.5px !important;
+  line-height: 1.78 !important;
+}
+
+.problem-page .text-xs {
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+}
+
+.problem-page .text-sm {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+.problem-page .text-base {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+.problem-page .text-lg,
+.problem-page .section-emoji {
+  font-size: 18px !important;
+  line-height: 1 !important;
+}
+
+.problem-title-panel {
+  padding: 28px !important;
+}
+
+.problem-title-panel h1 {
+  font-size: clamp(30px, 2vw, 36px) !important;
+  line-height: 1.18 !important;
+  letter-spacing: -.3px !important;
+  font-weight: 800 !important;
+}
+
+.problem-title-panel .h-16.w-16 {
+  height: 56px !important;
+  width: 56px !important;
+  font-size: 26px !important;
+}
+
+.study-card h2,
+.methodology-card h3,
+.study-sidebar-card .text-lg {
+  font-size: 20px !important;
+  line-height: 1.35 !important;
+  font-weight: 800 !important;
+}
+
+.study-card,
+.study-sidebar-card,
+.problem-title-panel {
+  box-shadow: 0 10px 24px rgba(15, 23, 42, .045) !important;
+}
+
+.guided-step {
+  overflow: hidden;
+}
+
+.guided-step-button {
+  min-height: 84px;
+}
+
+.guided-step-title {
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+  font-weight: 800 !important;
+}
+
+.guided-step-status {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  font-weight: 700 !important;
+  white-space: nowrap;
+}
+
+.guided-step-content {
+  margin-left: 52px !important;
+  padding-left: 0 !important;
+}
+
+.answer-label {
+  margin-bottom: 8px;
+  color: #1d4ed8;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  font-weight: 800 !important;
+}
+
+.answer-box p,
+.process-list li,
+.post-solve-card p,
+.post-solve-card li,
+.post-solve-card button {
+  font-size: 15.5px !important;
+  line-height: 1.78 !important;
+}
+
+.code-block {
+  border-radius: 14px !important;
+}
+
+.code-block-header {
+  min-height: 38px;
+}
+
+.code-language,
+.code-copy-button {
+  color: #cbd5e1;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  font-weight: 700 !important;
+}
+
+.code-block pre {
+  margin: 0 !important;
+  padding: 18px 20px !important;
+  font-size: 14px !important;
+  line-height: 1.8 !important;
+}
+
+.code-block code {
+  color: #f8fafc !important;
+  font-family: var(--font-code) !important;
+  font-size: 14px !important;
+  line-height: 1.8 !important;
+  white-space: pre !important;
+}
+
+.problem-page :not(pre) > code {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .75);
+  padding: 1px 5px;
+  color: #0f172a;
+  font-family: var(--font-code) !important;
+  font-size: 13.5px !important;
+}
+
+.study-sidebar-card {
+  padding: 18px !important;
+}
+
+.study-sidebar-nav a,
+.problem-aside button,
+.problem-aside a {
+  min-height: 42px;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+}
+
+@media (max-width: 1180px) {
+  .problem-layout {
+    grid-template-columns: 1fr !important;
+    justify-content: stretch !important;
+  }
+  .problem-main {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .app-main {
+    padding-inline: 12px !important;
+  }
+  .problem-title-panel h1 {
+    font-size: 28px !important;
+  }
+  .guided-step-content {
+    margin-left: 0 !important;
+    padding-left: 16px !important;
+  }
+  .problem-page p,
+  .problem-page li,
+  .problem-page button,
+  .problem-page .answer-box,
+  .problem-page .process-list,
+  .problem-page .post-solve-card {
+    font-size: 15px !important;
+  }
+}
+
+/* Multi-solution update: normalize Chinese typography and remove the tiny label problem. */
+.problem-page {
+  --problem-text-size: 16px;
+  --problem-small-size: 14.5px;
+}
+
+.problem-page p,
+.problem-page li,
+.problem-page button,
+.problem-page input,
+.problem-page textarea,
+.problem-page .readable-box,
+.problem-page .answer-box,
+.problem-page .process-list,
+.problem-page .post-solve-card,
+.problem-page .solution-summary-card,
+.problem-page .solution-detail-card {
+  font-size: var(--problem-text-size) !important;
+  line-height: 1.82 !important;
+  letter-spacing: 0 !important;
+}
+
+.guided-card .answer-label,
+.solution-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  margin-bottom: 8px;
+  color: #1d4ed8;
+  font-size: 15px !important;
+  line-height: 1.45 !important;
+  font-weight: 800 !important;
+}
+
+.guided-card .answer-box {
+  padding: 18px 20px !important;
+  border-radius: 18px !important;
+}
+
+.guided-card .answer-box p,
+.guided-step-button p {
+  font-size: 16px !important;
+  line-height: 1.86 !important;
+}
+
+.guided-step-title {
+  font-size: 17px !important;
+  line-height: 1.55 !important;
+}
+
+.guided-step-status {
+  font-size: 14px !important;
+}
+
+.problem-page .text-xs:not(.code-language):not(.code-copy-button),
+.problem-page .solution-summary-card .text-xs,
+.problem-page .solution-detail-card .text-xs {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+.problem-page .text-sm,
+.solution-summary-card p,
+.solution-detail-card p {
+  font-size: 15.5px !important;
+  line-height: 1.78 !important;
+}
+
+.solution-compare-grid {
+  align-items: stretch;
+}
+
+.solution-summary-card,
+.solution-detail-card {
+  box-shadow: 0 8px 20px rgba(15, 23, 42, .035);
+}
+
+.solution-summary-card span,
+.solution-detail-card span {
+  line-height: 1.45;
+}
+
+.solution-detail-card > button {
+  min-height: 76px;
+}
+
+.solution-detail-card .code-block {
+  margin-top: 2px;
+}
+
+.multi-solution-card .code-block code {
+  font-size: 14px !important;
+}
+
+.problem-title-panel h1 {
+  font-size: clamp(30px, 1.8vw, 34px) !important;
+  font-weight: 800 !important;
+}
+
+@media (max-width: 760px) {
+  .problem-page {
+    --problem-text-size: 15.5px;
+    --problem-small-size: 14px;
+  }
+  .guided-card .answer-label,
+  .solution-label {
+    font-size: 14.5px !important;
+  }
+  .guided-step-title {
+    font-size: 16px !important;
+  }
+}
+
+/* Final typography pass: make guide labels readable instead of tiny helper text. */
+.guided-card .answer-section-title,
+.problem-page .answer-section-title {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 0 0 10px 0 !important;
+  color: #0f3fbd !important;
+  font-size: 17px !important;
+  line-height: 1.5 !important;
+  font-weight: 800 !important;
+}
+
+.guided-card .answer-body {
+  color: #0f172a !important;
+  font-size: 16.5px !important;
+  line-height: 1.88 !important;
+}
+
+.guided-step-button,
+.guided-step-content {
+  font-size: 16.5px !important;
+}
+
+.guided-card .answer-box {
+  background: #fff !important;
+}
+
+@media (max-width: 760px) {
+  .guided-card .answer-section-title,
+  .problem-page .answer-section-title {
+    font-size: 16px !important;
+  }
+  .guided-card .answer-body,
+  .guided-step-button,
+  .guided-step-content {
+    font-size: 15.75px !important;
+  }
+}

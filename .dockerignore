@@ -1,0 +1,22 @@
+node_modules
+.next
+.git
+.gitignore
+data
+docs
+leetcode-master
+代码随想录算法PDF
+*.md
+!README.md
+.env
+.env.*
+**/.env*
+.claude
+.idea
+tts-logs
+github-readme-writer
+*.zip
+*.docx
+__pycache__
+# Generate public presentations inside the builder, never copy local audio/config.
+ship

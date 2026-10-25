@@ -1,0 +1,977 @@
+[
+  {
+    "id": 1,
+    "leetcodeId": 1,
+    "title": "两数之和",
+    "slug": "two-sum",
+    "category": "哈希",
+    "source": null
+  },
+  {
+    "id": 2,
+    "leetcodeId": 2,
+    "title": "两数相加",
+    "slug": "add-two-numbers",
+    "category": "链表",
+    "source": null
+  },
+  {
+    "id": 3,
+    "leetcodeId": 3,
+    "title": "无重复字符的最长子串",
+    "slug": "longest-substring-without-repeating-characters",
+    "category": "滑动窗口",
+    "source": null
+  },
+  {
+    "id": 4,
+    "leetcodeId": 4,
+    "title": "寻找两个正序数组的中位数",
+    "slug": "median-of-two-sorted-arrays",
+    "category": "二分查找",
+    "source": null
+  },
+  {
+    "id": 5,
+    "leetcodeId": 5,
+    "title": "最长回文子串",
+    "slug": "longest-palindromic-substring",
+    "category": "多维动态规划",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 263,
+      "score": 120,
+      "snippet": "回⽂⼦串是要连续的，回⽂⼦序列可不是连续的！ 回⽂⼦串，回⽂⼦序列都是动态规划经 典题⽬。 回⽂⼦串，可以做这两题： 647.回⽂⼦串 5.最长回⽂⼦串 思路其实是差不多的，但本题要⽐求回⽂⼦串简单⼀点，因为情况少了⼀点。 动规五部曲分析如下： 1. 确定dp数组（dp table）以及下标的含义 dp[i][j]：字符串s在[i, j]范围内最长的回⽂⼦序列的长度为dp[i][j]。 2. 确定递推公式 在判断回⽂⼦串的题⽬中，关键逻辑就是看s[i]与s[j]是否相同。 如果s[i]与s[j]相同，那么dp[i][j] = dp[i + 1][j - 1] + 2; 如图： （如果这⾥看不懂，回忆⼀下dp[i][j]的定义）"
+    }
+  },
+  {
+    "id": 6,
+    "leetcodeId": 10,
+    "title": "正则表达式匹配",
+    "slug": "regular-expression-matching",
+    "category": "多维动态规划",
+    "source": null
+  },
+  {
+    "id": 7,
+    "leetcodeId": 11,
+    "title": "盛最多水的容器",
+    "slug": "container-with-most-water",
+    "category": "双指针",
+    "source": null
+  },
+  {
+    "id": 8,
+    "leetcodeId": 15,
+    "title": "三数之和",
+    "slug": "3sum",
+    "category": "双指针",
+    "source": null
+  },
+  {
+    "id": 9,
+    "leetcodeId": 17,
+    "title": "电话号码的字母组合",
+    "slug": "letter-combinations-of-a-phone-number",
+    "category": "回溯",
+    "source": {
+      "pdf": "「代码随想录」回溯算法精讲（v2.0）.pdf",
+      "page": 28,
+      "score": 120,
+      "snippet": "电话号码的字母组合 17.电话号码的字母组合 题⽬链接：https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/ 给定⼀个仅包含数字 2-9 的字符串，返回所有它能表⽰的字母组合。 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。 ⽰例: 输⼊：\"23\" 输出：[\"ad\", \"ae\", \"af\", \"bd\", \"be\", \"bf\", \"cd\", \"ce\", \"cf\"]. 说明：尽管上⾯的答案是按字典序排列的，但是你可以任意选择答案输出的顺序。 思路 从⽰例上来说，输⼊\"23\"，最直接的想法就是两层for循环遍历了吧，正好把组合的情况都 输出了。 如果输⼊\"233\"呢，那么就三层for循环，如果\"2333\"呢，就四层for循环......."
+    }
+  },
+  {
+    "id": 10,
+    "leetcodeId": 19,
+    "title": "删除链表的倒数第N个结点",
+    "slug": "remove-nth-node-from-end-of-list",
+    "category": "链表",
+    "source": null
+  },
+  {
+    "id": 11,
+    "leetcodeId": 20,
+    "title": "有效的括号",
+    "slug": "valid-parentheses",
+    "category": "栈",
+    "source": null
+  },
+  {
+    "id": 12,
+    "leetcodeId": 21,
+    "title": "合并两个有序链表",
+    "slug": "merge-two-sorted-lists",
+    "category": "链表",
+    "source": null
+  },
+  {
+    "id": 13,
+    "leetcodeId": 22,
+    "title": "括号生成",
+    "slug": "generate-parentheses",
+    "category": "回溯",
+    "source": null
+  },
+  {
+    "id": 14,
+    "leetcodeId": 31,
+    "title": "下一个排列",
+    "slug": "next-permutation",
+    "category": "技巧",
+    "source": null
+  },
+  {
+    "id": 15,
+    "leetcodeId": 32,
+    "title": "最长有效括号",
+    "slug": "longest-valid-parentheses",
+    "category": "栈",
+    "source": null
+  },
+  {
+    "id": 16,
+    "leetcodeId": 33,
+    "title": "搜索旋转排序数组",
+    "slug": "search-in-rotated-sorted-array",
+    "category": "二分查找",
+    "source": null
+  },
+  {
+    "id": 17,
+    "leetcodeId": 34,
+    "title": "在排序数组中查找元素的第一个和最后一个位置",
+    "slug": "find-first-and-last-position-of-element-in-sorted-array",
+    "category": "二分查找",
+    "source": null
+  },
+  {
+    "id": 18,
+    "leetcodeId": 39,
+    "title": "组合总和",
+    "slug": "combination-sum",
+    "category": "回溯",
+    "source": {
+      "pdf": "「代码随想录」回溯算法精讲（v2.0）.pdf",
+      "page": 53,
+      "score": 150,
+      "snippet": "总结 本题同样是求组合总和，但就是因为其数组candidates有重复元素，⽽要求不能有重复的组 合，所以相对于39.组合总和难度提升了不少。 关键是去重的逻辑，代码很简单，⽹上⼀搜⼀⼤把，但⼏乎没有能把这块代码含义讲明⽩ 的，基本都是给出代码，然后说这就是去重了，究竟怎么个去重法也是模棱两可。 所以Carl有必要把去重的这块彻彻底底的给⼤家讲清楚，就连“树层去重”和“树枝去重”都是 我⾃创的词汇，希望对⼤家理解有帮助！ 分割回⽂串 backtracking(candidates, target, sum, i + 1, used); // 和 39.组合总和的区别1，这⾥是i+1，每个数字在每个组合中只能使⽤⼀次 used[i] = false; sum -= candidates[i]; path.pop_back(); } } public: vector<vector<int>> combinationSum2(vector<int>& candidates, int target) { vector<bool> used(candidates.size(), false); path.clear(); result.clear(); // ⾸先把给candidates排序，让其相同的元素都挨在⼀起。 sort(candidates.begin(), candidates.end()); backtracking(candidates, target, 0, 0, used); return result; } };"
+    }
+  },
+  {
+    "id": 19,
+    "leetcodeId": 42,
+    "title": "接雨水",
+    "slug": "trapping-rain-water",
+    "category": "双指针",
+    "source": null
+  },
+  {
+    "id": 20,
+    "leetcodeId": 46,
+    "title": "全排列",
+    "slug": "permutations",
+    "category": "回溯",
+    "source": {
+      "pdf": "「代码随想录」回溯算法精讲（v2.0）.pdf",
+      "page": 88,
+      "score": 150,
+      "snippet": "总结 本题题解清⼀⾊都说是深度优先搜索，但我更倾向于说它⽤回溯法，⽽且本题我也是完全使 ⽤回溯法的逻辑来分析的。 相信⼤家在本题中处处都能看到是回溯算法：求⼦集问题（⼆）的⾝影，但处处又都是陷 阱。 对于养成思维定式或者套模板套嗨了的同学，这道题起到了很好的警醒作⽤。更重要的是拓 展了⼤家的思路！ 就酱，如果感觉「代码随想录」很⼲货，就帮Carl宣传⼀波吧！ 排列问题 46.全排列 题⽬链接：https://leetcode-cn.com/problems/permutations/ 给定⼀个 没有重复 数字的序列，返回其所有可能的全排列。 ⽰例: 输⼊: [1,2,3] 输出: [ [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1] ]"
+    }
+  },
+  {
+    "id": 21,
+    "leetcodeId": 48,
+    "title": "旋转图像",
+    "slug": "rotate-image",
+    "category": "矩阵",
+    "source": null
+  },
+  {
+    "id": 22,
+    "leetcodeId": 49,
+    "title": "字母异位词分组",
+    "slug": "group-anagrams",
+    "category": "哈希",
+    "source": null
+  },
+  {
+    "id": 23,
+    "leetcodeId": 53,
+    "title": "最大子数组和",
+    "slug": "maximum-subarray",
+    "category": "普通数组",
+    "source": null
+  },
+  {
+    "id": 24,
+    "leetcodeId": 55,
+    "title": "跳跃游戏",
+    "slug": "jump-game",
+    "category": "贪心",
+    "source": {
+      "pdf": "「代码随想录」贪心算法专题精讲（v2.0）.pdf",
+      "page": 27,
+      "score": 120,
+      "snippet": "总结 股票问题其实是⼀个系列的，属于动态规划的范畴，因为⽬前在讲解贪⼼系列，所以股票问 题会在之后的动态规划系列中详细讲解。 可以看出有时候，贪⼼往往⽐动态规划更巧妙，更好⽤，所以别⼩看了贪⼼算法。 本题中理解利润拆分是关键点！ 不要整块的去看，⽽是把整体利润拆为每天的利润。 ⼀旦想到这⾥了，很⾃然就会想到贪⼼了，即：只收集每天的正利润，最后稳稳的就是最⼤ 利润了。 贪⼼算法：跳跃游戏 55. 跳跃游戏 题⽬链接：https://leetcode-cn.com/problems/jump-game/ 给定⼀个⾮负整数数组，你最初位于数组的第⼀个位置。 数组中的每个元素代表你在该位置可以跳跃的最⼤长度。 判断你是否能够到达最后⼀个位置。 ⽰例 1: 输⼊: [2,3,1,1,4] 输出: true 解释: 我们可以先跳 1 步，从位置 0 到达 位置 1, 然后再从位置 1 跳 3 步到达最后⼀个位置。 时间复杂度O(n) 空间复杂度O(n) };"
+    }
+  },
+  {
+    "id": 25,
+    "leetcodeId": 56,
+    "title": "合并区间",
+    "slug": "merge-intervals",
+    "category": "普通数组",
+    "source": {
+      "pdf": "「代码随想录」贪心算法专题精讲（v2.0）.pdf",
+      "page": 92,
+      "score": 120,
+      "snippet": "贪⼼算法：合并区间 56. 合并区间 题⽬链接：https://leetcode-cn.com/problems/merge-intervals/ 给出⼀个区间的集合，请合并所有重叠的区间。 ⽰例 1: 输⼊: intervals = [[1,3],[2,6],[8,10],[15,18]] 输出: [[1,6],[8,10],[15,18]] 解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6]."
+    }
+  },
+  {
+    "id": 26,
+    "leetcodeId": 62,
+    "title": "不同路径",
+    "slug": "unique-paths",
+    "category": "多维动态规划",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 41,
+      "score": 150,
+      "snippet": "如果这个图看不同，建议在理解⼀下递归公式，然后照着⽂章中说的遍历顺序，⾃⼰推导⼀ 下 ！ 动规五部分分析完毕，对应C++代码如下： 时间复杂度O(n * m) n m 分别为obstacleGrid 长度和宽度 空间复杂度O(n * m) ⾄于能不能优化空间降为⼀维dp数组，我感觉不太⾏，因为要考虑障碍，如果把这些障碍 压缩到⼀⾏，结果⼀定就不⼀样了。 总结 本题是62.不同路径的障碍版，整体思路⼤体⼀致。 但就算是做过62.不同路径，在做本题也会有感觉遇到障碍⽆从下⼿。 class Solution { public: int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) { int m = obstacleGrid.size(); int n = obstacleGrid[0].size(); vector<vector<int>> dp(m, vector<int>(n, 0)); for (int i = 0; i < m && obstacleGrid[i][0] == 0; i++) dp[i] [0] = 1; for (int j = 0; j < n && obstacleGrid[0][j] == 0; j++) dp[0] [j] = 1; for (int i = 1; i < m; i++) { for (int j = 1; j < n; j++) { if (obstacleGrid[i][j] == 1) continue; dp[i][j] = dp[i - 1][j] + dp[i][j - 1]; } } return dp[m - 1][n - 1]; } };"
+    }
+  },
+  {
+    "id": 27,
+    "leetcodeId": 64,
+    "title": "最小路径和",
+    "slug": "minimum-path-sum",
+    "category": "多维动态规划",
+    "source": null
+  },
+  {
+    "id": 28,
+    "leetcodeId": 70,
+    "title": "爬楼梯",
+    "slug": "climbing-stairs",
+    "category": "动态规划",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 25,
+      "score": 130,
+      "snippet": "输⼊：cost = [10, 15, 20] 输出：15 从题⽬描述可以看出：要不是第⼀步不需要花费体⼒，要不就是第最后⼀步不需要花费体 ⼒，我个⼈理解：题意说的其实是第⼀步是要⽀付费⽤的！。因为是当你爬上⼀个台阶就要 花费对应的体⼒值！ 所以我定义的dp[i]意思是也是第⼀步是要花费体⼒的，最后⼀步不⽤花费体⼒了，因为已 经⽀付了。 当然也可以样，定义dp[i]为:第⼀步是不花费体⼒，最后⼀步是花费体⼒的。 所以代码这么写： 这么写看上去⽐较顺，但是就是感觉和题⽬描述的不太符。哈哈，也没有必要这么细扣题意 了，⼤家只要知道，题⽬的意思反正就是要不是第⼀步不花费，要不是最后⼀步不花费，都 可以。 总结 ⼤家可以发现这道题⽬相对于 昨天的动态规划：爬楼梯有难了⼀点，但整体思路是⼀样。 class Solution { public: int minCostClimbingStairs(vector<int>& cost) { vector<int> dp(cost.size() + 1); dp[0] = 0; // 默认第⼀步都是不花费体⼒的 dp[1] = 0; for (int i = 2; i <= cost.size(); i++) { dp[i] = min(dp[i - 1] + cost[i - 1], dp[i - 2] + cost[i - 2]); } return dp[cost.size()]; } };"
+    }
+  },
+  {
+    "id": 29,
+    "leetcodeId": 72,
+    "title": "编辑距离",
+    "slug": "edit-distance",
+    "category": "多维动态规划",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 235,
+      "score": 120,
+      "snippet": "0 <= s.length, t.length <= 1000 s 和 t 由英⽂字母组成 思路 这道题⽬如果不是⼦序列，⽽是要求连续序列的，那就可以考虑⽤KMP。 这道题⽬相对于72. 编辑距离，简单了不少，因为本题相当于只有删除操作，不⽤考虑替换 增加之类的。 但相对于刚讲过的动态规划：392.判断⼦序列就有难度了，这道题⽬双指针法可就做不了 了，来看看动规五部曲分析如下： 1. 确定dp数组（dp table）以及下标的含义 dp[i][j]：以i-1为结尾的s⼦序列中出现以j-1为结尾的t的个数为dp[i][j]。 2. 确定递推公式 这⼀类问题，基本是要分析两种情况 s[i - 1] 与 t[j - 1]相等 s[i - 1] 与 t[j - 1] 不相等 当s[i - 1] 与 t[j - 1]相等时，dp[i][j]可以有两部分组成。 ⼀部分是⽤s[i - 1]来匹配，那么个数为dp[i - 1][j - 1]。 ⼀部分是不⽤s[i - 1]来匹配，个数为dp[i - 1][j]。 这⾥可能有同学不明⽩了，为什么还要考虑 不⽤s[i - 1]来匹配，都相同了指定要匹配啊。 例如： s：bagg 和 t：bag ，s[3] 和 t[2]是相同的，但是字符串s也可以不⽤s[3]来匹配，即 ⽤s[0]s[1]s[2]组成的bag。 当然也可以⽤s[3]来匹配，即：s[0]s[1]s[3]组成的bag。 所以当s[i - 1] 与 t[j - 1]相等时，dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];"
+    }
+  },
+  {
+    "id": 30,
+    "leetcodeId": 75,
+    "title": "颜色分类",
+    "slug": "sort-colors",
+    "category": "技巧",
+    "source": null
+  },
+  {
+    "id": 31,
+    "leetcodeId": 76,
+    "title": "最小覆盖子串",
+    "slug": "minimum-window-substring",
+    "category": "滑动窗口",
+    "source": null
+  },
+  {
+    "id": 32,
+    "leetcodeId": 78,
+    "title": "子集",
+    "slug": "subsets",
+    "category": "回溯",
+    "source": {
+      "pdf": "「代码随想录」回溯算法精讲（v2.0）.pdf",
+      "page": 68,
+      "score": 150,
+      "snippet": "总结 在回溯算法：分割回⽂串中我列举的分割字符串的难点，本题都覆盖了。 ⽽且本题还需要操作字符串添加逗号作为分隔符，并验证区间的合法性。 可以说是回溯算法：分割回⽂串的加强版。 在本⽂的树形结构图中，我已经把详细的分析思路都画了出来，相信⼤家看了之后⼀定会思 路清晰不少！ 回溯算法：求⼦集问题！ 第78题. ⼦集 题⽬地址：https://leetcode-cn.com/problems/subsets/ 给定⼀组不含重复元素的整数数组 nums，返回该数组所有可能的⼦集（幂集）。 说明：解集不能包含重复的⼦集。 return true; } public: vector<string> restoreIpAddresses(string s) { result.clear(); if (s.size() > 12) return result; // 算是剪枝了 backtracking(s, 0, 0); return result; } };"
+    }
+  },
+  {
+    "id": 33,
+    "leetcodeId": 79,
+    "title": "单词搜索",
+    "slug": "word-search",
+    "category": "回溯",
+    "source": null
+  },
+  {
+    "id": 34,
+    "leetcodeId": 81,
+    "title": "搜索旋转排序数组 II",
+    "slug": "search-in-rotated-sorted-array-ii",
+    "category": "二分查找",
+    "source": null
+  },
+  {
+    "id": 35,
+    "leetcodeId": 84,
+    "title": "柱状图中最大的矩形",
+    "slug": "largest-rectangle-in-histogram",
+    "category": "栈",
+    "source": null
+  },
+  {
+    "id": 36,
+    "leetcodeId": 85,
+    "title": "最大矩形",
+    "slug": "maximal-rectangle",
+    "category": "栈",
+    "source": null
+  },
+  {
+    "id": 37,
+    "leetcodeId": 94,
+    "title": "二叉树的中序遍历",
+    "slug": "binary-tree-inorder-traversal",
+    "category": "二叉树",
+    "source": {
+      "pdf": "「代码随想录」二叉树专题精讲（v2.0）.pdf",
+      "page": 13,
+      "score": 120,
+      "snippet": "此时⼤家可以做⼀做leetcode上三道题⽬，分别是： 144.⼆叉树的前序遍历 145.⼆叉树的后序遍历 94.⼆叉树的中序遍历 可能有同学感觉前后中序遍历的递归太简单了，要打迭代法（⾮递归），别急，我们明天打 迭代法，打个通透！ ⼆叉树的迭代遍历 听说还可以⽤⾮递归的⽅式 看完本篇⼤家可以使⽤迭代法，再重新解决如下三道leetcode上的题⽬： 144.⼆叉树的前序遍历 94.⼆叉树的中序遍历 145.⼆叉树的后序遍历 为什么可以⽤迭代法（⾮递归的⽅式）来实现⼆叉树的前后中序遍历呢？ 我们在栈与队列：匹配问题都是栈的强项中提到了，递归的实现就是：每⼀次递归调⽤都会 把函数的局部变量、参数值和返回地址等压⼊调⽤栈中，然后递归返回的时候，从栈顶弹出 上⼀次递归的各项参数，所以这就是递归为什么可以返回上⼀层位置的原因。 void traversal(TreeNode* cur, vector<int>& vec) { if (cur == NULL) return; traversal(cur->left, vec); // 左 traversal(cur->right, vec); // 右 vec.push_back(cur->val); // 中 }"
+    }
+  },
+  {
+    "id": 38,
+    "leetcodeId": 96,
+    "title": "不同的二叉搜索树",
+    "slug": "unique-binary-search-trees",
+    "category": "二叉树",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 48,
+      "score": 120,
+      "snippet": "不同的⼆叉搜索树 96.不同的⼆叉搜索树 题⽬链接：https://leetcode-cn.com/problems/unique-binary-search-trees/ 给定⼀个整数 n，求以 1 ... n 为节点组成的⼆叉搜索树有多少种？ ⽰例: 思路 这道题⽬描述很简短，但估计⼤部分同学看完都是懵懵的状态，这得怎么统计呢？ 关于什么是⼆叉搜索树，我们之前在讲解⼆叉树专题的时候已经详细讲解过了，也可以看看 这篇⼆叉树：⼆叉搜索树登场！在回顾⼀波。 了解了⼆叉搜索树之后，我们应该先举⼏个例⼦，画画图，看看有没有什么规律，如图："
+    }
+  },
+  {
+    "id": 39,
+    "leetcodeId": 98,
+    "title": "验证二叉搜索树",
+    "slug": "validate-binary-search-tree",
+    "category": "二叉树",
+    "source": {
+      "pdf": "「代码随想录」二叉树专题精讲（v2.0）.pdf",
+      "page": 182,
+      "score": 120,
+      "snippet": "总结 本篇我们介绍了⼆叉搜索树的遍历⽅式，因为⼆叉搜索树的有序性，遍历的时候要⽐普通⼆ 叉树简单很多。 但是⼀些同学很容易忽略⼆叉搜索树的特性，所以写出遍历的代码就未必真的简单了。 所以针对⼆叉搜索树的题⽬，⼀样要利⽤其特性。 ⽂中我依然给出递归和迭代两种⽅式，可以看出写法都⾮常简单，就是利⽤了⼆叉搜索树有 序的特点。 验证⼆叉搜索树 98.验证⼆叉搜索树 题⽬地址：https://leetcode-cn.com/problems/validate-binary-search-tree/ 给定⼀个⼆叉树，判断其是否是⼀个有效的⼆叉搜索树。 假设⼀个⼆叉搜索树具有如下特征： 节点的左⼦树只包含⼩于当前节点的数。 节点的右⼦树只包含⼤于当前节点的数。 所有左⼦树和右⼦树⾃⾝必须也是⼆叉搜索树。"
+    }
+  },
+  {
+    "id": 40,
+    "leetcodeId": 101,
+    "title": "对称二叉树",
+    "slug": "symmetric-tree",
+    "category": "二叉树",
+    "source": {
+      "pdf": "「代码随想录」二叉树专题精讲（v2.0）.pdf",
+      "page": 54,
+      "score": 120,
+      "snippet": "代码随想录算法公开课 ，代码随想录的全部内容将由我（程序员Carl）视频讲解 并开免费开放给⼤家。 《代码随想录》纸质版 已经出版。 代码随想录知识星球 上万录友在这⾥学习 代码随想录算法训练营 帮助录友⾼效刷完代码随想录。 如果感觉PDF对你有帮助，微信搜索：代码随想录，你会发现相见恨晚！ 对称⼆叉树 101. 对称⼆叉树 题⽬地址：https://leetcode-cn.com/problems/symmetric-tree/ 给定⼀个⼆叉树，检查它是否是镜像对称的。"
+    }
+  },
+  {
+    "id": 41,
+    "leetcodeId": 102,
+    "title": "二叉树的层序遍历",
+    "slug": "binary-tree-level-order-traversal",
+    "category": "二叉树",
+    "source": {
+      "pdf": "「代码随想录」二叉树专题精讲（v2.0）.pdf",
+      "page": 23,
+      "score": 120,
+      "snippet": "总结 此时我们写出了统⼀风格的迭代法，不⽤在纠结于前序写出来了，中序写不出来的情况了。 但是统⼀风格的迭代法并不好理解，⽽且想在⾯试直接写出来还有难度的。 所以⼤家根据⾃⼰的个⼈喜好，对于⼆叉树的前中后序遍历，选择⼀种⾃⼰容易理解的递归 和迭代法。 ⼆叉树的层序遍历 看完这篇⽂章虽然不能打⼗个，但是可以迅速打⼋个！⽽且够快！ 学会⼆叉树的层序遍历，可以⼀⼜⽓撸完leetcode上⼋道题⽬： 102.⼆叉树的层序遍历 107.⼆叉树的层次遍历II 199.⼆叉树的右视图 if (node->right) st.push(node->right); // 右 if (node->left) st.push(node->left); // 左 } else { st.pop(); node = st.top(); st.pop(); result.push_back(node->val); } } return result; } };"
+    }
+  },
+  {
+    "id": 42,
+    "leetcodeId": 104,
+    "title": "二叉树的最大深度",
+    "slug": "maximum-depth-of-binary-tree",
+    "category": "二叉树",
+    "source": {
+      "pdf": "「代码随想录」二叉树专题精讲（v2.0）.pdf",
+      "page": 63,
+      "score": 120,
+      "snippet": "⼆叉树的最⼤深度 看完本篇可以⼀起做了如下两道题⽬： 104.⼆叉树的最⼤深度 题⽬地址：https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/ 给定⼀个⼆叉树，找出其最⼤深度。 ⼆叉树的深度为根节点到最远叶⼦节点的最长路径上的节点数。 说明: 叶⼦节点是指没有⼦节点的节点。 ⽰例： 给定⼆叉树 [3,9,20,null,null,15,7]， 返回它的最⼤深度 3 。 递归法 104.⼆叉树的最⼤深度 559.N叉树的最⼤深度"
+    }
+  },
+  {
+    "id": 43,
+    "leetcodeId": 105,
+    "title": "从前序与中序遍历序列构造二叉树",
+    "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+    "category": "二叉树",
+    "source": {
+      "pdf": "「代码随想录」二叉树专题精讲（v2.0）.pdf",
+      "page": 141,
+      "score": 120,
+      "snippet": "构造⼆叉树登场 看完本⽂，可以⼀起解决如下两道题⽬ 106.从中序与后序遍历序列构造⼆叉树 题⽬地址：https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-post order-traversal/ 根据⼀棵树的中序遍历与后序遍历构造⼆叉树。 注意: 你可以假设树中没有重复的元素。 例如，给出 中序遍历 inorder = [9,3,15,20,7] 后序遍历 postorder = [9,15,7,20,3] 返回如下的⼆叉树： 106.从中序与后序遍历序列构造⼆叉树 105.从前序与中序遍历序列构造⼆叉树"
+    }
+  },
+  {
+    "id": 44,
+    "leetcodeId": 114,
+    "title": "二叉树展开为链表",
+    "slug": "flatten-binary-tree-to-linked-list",
+    "category": "二叉树",
+    "source": null
+  },
+  {
+    "id": 45,
+    "leetcodeId": 121,
+    "title": "买卖股票的最佳时机",
+    "slug": "best-time-to-buy-and-sell-stock",
+    "category": "贪心",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 159,
+      "score": 120,
+      "snippet": "买卖股票的最佳时机 121. 买卖股票的最佳时机 题⽬链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/ 给定⼀个数组 prices ，它的第 i 个元素 prices[i] 表⽰⼀⽀给定股票第 i 天的价格。 你只能选择 某⼀天 买⼊这只股票，并选择在 未来的某⼀个不同的⽇⼦ 卖出该股票。设计⼀ 个算法来计算你所能获取的最⼤利润。 返回你可以从这笔交易中获取的最⼤利润。如果你不能获取任何利润，返回 0 。 ⽰例 1： 输⼊：[7,1,5,3,6,4] 输出：5 解释：在第 2 天（股票价格 = 1）的时候买⼊，在第 5 天（股票价格 = 6）的时候卖出，最 ⼤利润 = 6-1 = 5 。注意利润不能是 7-1 = 6, 因为卖出价格需要⼤于买⼊价格；同时，你不 能在买⼊前卖出股票。"
+    }
+  },
+  {
+    "id": 46,
+    "leetcodeId": 124,
+    "title": "二叉树中的最大路径和",
+    "slug": "binary-tree-maximum-path-sum",
+    "category": "二叉树",
+    "source": null
+  },
+  {
+    "id": 47,
+    "leetcodeId": 128,
+    "title": "最长连续序列",
+    "slug": "longest-consecutive-sequence",
+    "category": "哈希",
+    "source": null
+  },
+  {
+    "id": 48,
+    "leetcodeId": 136,
+    "title": "只出现一次的数字",
+    "slug": "single-number",
+    "category": "技巧",
+    "source": null
+  },
+  {
+    "id": 49,
+    "leetcodeId": 139,
+    "title": "单词拆分",
+    "slug": "word-break",
+    "category": "动态规划",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 127,
+      "score": 120,
+      "snippet": "代码随想录开源项⽬Github：https://github.com/youngyangyang04/leetcode- master 代码随想录算法公开课 ，代码随想录的全部内容将由我（程序员Carl）视频讲解 并开免费开放给⼤家。 《代码随想录》纸质版 已经出版。 代码随想录知识星球 上万录友在这⾥学习 代码随想录算法训练营 帮助录友⾼效刷完代码随想录。 如果感觉PDF对你有帮助，微信搜索：代码随想录，关注我吧，你会发现相见恨晚！ 单词拆分 139.单词拆分 题⽬链接：https://leetcode-cn.com/problems/word-break/ 给定⼀个⾮空字符串 s 和⼀个包含⾮空单词的列表 wordDict，判定 s 是否可以被空格拆分 为⼀个或多个在字典中出现的单词。"
+    }
+  },
+  {
+    "id": 50,
+    "leetcodeId": 141,
+    "title": "环形链表",
+    "slug": "linked-list-cycle",
+    "category": "链表",
+    "source": {
+      "pdf": "「代码随想录」回溯算法精讲（v2.0）.pdf",
+      "page": 37,
+      "score": 100,
+      "snippet": "周五 在回溯算法：电话号码的字母组合中，开始⽤多个集合来求组合，还是熟悉的模板题⽬，但 是有⼀些细节。 例如这⾥for循环，可不像是在 回溯算法：求组合问题！和回溯算法：求组合总和！中从 startIndex开始遍历的。 因为本题每⼀个数字代表的是不同集合，也就是求不同集合之间的组合，⽽回溯算法：求组 合问题！和回溯算法：求组合总和！都是是求同⼀个集合中的组合！ 如果⼤家在现场⾯试的时候，⼀定要注意各种输⼊异常的情况，例如本题输⼊1 * #按键。 其实本题不算难，但也处处是细节，还是要反复琢磨。 周六 因为之前链表系列没有写总结，虽然链表系列已经是两个⽉前的事情，但还是有必要补⼀ 下。 所以给出链表：总结篇！，这⾥对之前链表理论基础和经典题⽬进⾏了总结。 同时对链表：环找到了，那⼊⼜呢？中求环⼊⼜的问题又进⾏了补充证明，可以说把环形链 表的⽅⽅⾯⾯都讲的很通透了，⼤家如果没有做过环形链表的题⽬⼀定要去做⼀做。 总结 相信通过这⼀周对回溯法的学习，⼤家已经掌握其题本套路了，也不会对回溯法那么畏惧 了。 回溯法抽象为树形结构后，其遍历过程就是：for循环横向遍历，递归纵向遍历，回溯不断 调整结果集。 这个是我做了很多回溯的题⽬，不断摸索其规律才总结出来的。 对于回溯法的整体框架，⽹上搜的⽂章这块⼀般都说不清楚，按照天上掉下来的代码对着讲 解，不知道究竟是怎么来的，也不知道为什么要这么写。"
+    }
+  },
+  {
+    "id": 51,
+    "leetcodeId": 142,
+    "title": "环形链表 II",
+    "slug": "linked-list-cycle-ii",
+    "category": "链表",
+    "source": null
+  },
+  {
+    "id": 52,
+    "leetcodeId": 146,
+    "title": "LRU 缓存",
+    "slug": "lru-cache",
+    "category": "链表",
+    "source": null
+  },
+  {
+    "id": 53,
+    "leetcodeId": 148,
+    "title": "排序链表",
+    "slug": "sort-list",
+    "category": "链表",
+    "source": null
+  },
+  {
+    "id": 54,
+    "leetcodeId": 152,
+    "title": "乘积最大子数组",
+    "slug": "maximum-product-subarray",
+    "category": "动态规划",
+    "source": null
+  },
+  {
+    "id": 55,
+    "leetcodeId": 153,
+    "title": "寻找旋转排序数组中的最小值",
+    "slug": "find-minimum-in-rotated-sorted-array",
+    "category": "二分查找",
+    "source": null
+  },
+  {
+    "id": 56,
+    "leetcodeId": 154,
+    "title": "寻找旋转排序数组中的最小值 II",
+    "slug": "find-minimum-in-rotated-sorted-array-ii",
+    "category": "二分查找",
+    "source": null
+  },
+  {
+    "id": 57,
+    "leetcodeId": 155,
+    "title": "最小栈",
+    "slug": "min-stack",
+    "category": "栈",
+    "source": null
+  },
+  {
+    "id": 58,
+    "leetcodeId": 160,
+    "title": "相交链表",
+    "slug": "intersection-of-two-linked-lists",
+    "category": "链表",
+    "source": null
+  },
+  {
+    "id": 59,
+    "leetcodeId": 169,
+    "title": "多数元素",
+    "slug": "majority-element",
+    "category": "技巧",
+    "source": null
+  },
+  {
+    "id": 60,
+    "leetcodeId": 198,
+    "title": "打家劫舍",
+    "slug": "house-robber",
+    "category": "动态规划",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 141,
+      "score": 120,
+      "snippet": "求组合数：动态规划：518.零钱兑换II 求排列数：动态规划：377. 组合总和 Ⅳ、动态规划：70. 爬楼梯进阶版（完全背 包） 如果求最⼩数，那么两层for循环的先后顺序就⽆所谓了，相关题⽬如下： 求最⼩数：动态规划：322. 零钱兑换、动态规划：279.完全平⽅数 对于背包问题，其实递推公式算是容易的，难是难在遍历顺序上，如果把遍历顺序搞透，才 算是真正理解了。 总结 这篇背包问题总结篇是对背包问题的⾼度概括，讲最关键的两部：递推公式和遍历顺序，结 合⼒扣上的题⽬全都抽象出来了。 ⽽且每⼀个点，我都给出了对应的⼒扣题⽬。 最后如果你想了解多重背包，可以看这篇动态规划：关于多重背包，你该了解这些！，⼒扣 上还没有多重背包的题⽬，也不是⾯试考察的重点。 如果把我本篇总结出来的内容都掌握的话，可以说对背包问题理解的就很深刻了，⽤来对付 ⾯试中的背包问题绰绰有余！ 打家劫舍 198.打家劫舍"
+    }
+  },
+  {
+    "id": 61,
+    "leetcodeId": 200,
+    "title": "岛屿数量",
+    "slug": "number-of-islands",
+    "category": "图论",
+    "source": null
+  },
+  {
+    "id": 62,
+    "leetcodeId": 206,
+    "title": "反转链表",
+    "slug": "reverse-linked-list",
+    "category": "链表",
+    "source": null
+  },
+  {
+    "id": 63,
+    "leetcodeId": 207,
+    "title": "课程表",
+    "slug": "course-schedule",
+    "category": "图论",
+    "source": null
+  },
+  {
+    "id": 64,
+    "leetcodeId": 208,
+    "title": "实现 Trie",
+    "slug": "implement-trie-prefix-tree",
+    "category": "前缀树",
+    "source": null
+  },
+  {
+    "id": 65,
+    "leetcodeId": 215,
+    "title": "数组中的第K个最大元素",
+    "slug": "kth-largest-element-in-an-array",
+    "category": "堆",
+    "source": null
+  },
+  {
+    "id": 66,
+    "leetcodeId": 221,
+    "title": "最大正方形",
+    "slug": "maximal-square",
+    "category": "多维动态规划",
+    "source": null
+  },
+  {
+    "id": 67,
+    "leetcodeId": 226,
+    "title": "翻转二叉树",
+    "slug": "invert-binary-tree",
+    "category": "二叉树",
+    "source": {
+      "pdf": "「代码随想录」二叉树专题精讲（v2.0）.pdf",
+      "page": 40,
+      "score": 120,
+      "snippet": "dl. 填充每个节点的下⼀个右侧节点指针 117.填充每个节点的下⼀个右侧节点指针II 如果⾮要打⼗个，还得找叶师傅！ 翻转⼆叉树 226.翻转⼆叉树 题⽬地址：https://leetcode-cn.com/problems/invert-binary-tree/ 翻转⼀棵⼆叉树。"
+    }
+  },
+  {
+    "id": 68,
+    "leetcodeId": 234,
+    "title": "回文链表",
+    "slug": "palindrome-linked-list",
+    "category": "链表",
+    "source": null
+  },
+  {
+    "id": 69,
+    "leetcodeId": 236,
+    "title": "二叉树的最近公共祖先",
+    "slug": "lowest-common-ancestor-of-a-binary-tree",
+    "category": "二叉树",
+    "source": {
+      "pdf": "「代码随想录」二叉树专题精讲（v2.0）.pdf",
+      "page": 206,
+      "score": 120,
+      "snippet": "本来是打算将⼆叉树和⼆叉搜索树的公共祖先问题⼀起讲，后来发现篇幅过长了，只 能先说⼀说⼆叉树的公共祖先问题。 236. ⼆叉树的最近公共祖先 题⽬链接：https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/ 给定⼀个⼆叉树, 找到该树中两个指定节点的最近公共祖先。 百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表⽰为⼀ 个结点 x，满⾜ x 是 p、q 的祖先且 x 的深度尽可能⼤（⼀个节点也可以是它⾃⼰的祖先）。” 例如，给定如下⼆叉树: root = [3,5,1,6,2,0,8,null,null,7,4] ⽰例 1: 输⼊: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1 输出: 3 解释: 节点 5 和节点 1 的最近公共祖先是节点 3。 ⽰例 2: 输⼊: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4 输出: 5 解释: 节点 5 和节点 4 的最近公共祖先是节点 5。因为根据定义最近公共祖先节点可以为节点 本⾝。"
+    }
+  },
+  {
+    "id": 70,
+    "leetcodeId": 238,
+    "title": "除自身以外数组的乘积",
+    "slug": "product-of-array-except-self",
+    "category": "普通数组",
+    "source": null
+  },
+  {
+    "id": 71,
+    "leetcodeId": 239,
+    "title": "滑动窗口最大值",
+    "slug": "sliding-window-maximum",
+    "category": "单调队列",
+    "source": null
+  },
+  {
+    "id": 72,
+    "leetcodeId": 240,
+    "title": "搜索二维矩阵 II",
+    "slug": "search-a-2d-matrix-ii",
+    "category": "矩阵",
+    "source": null
+  },
+  {
+    "id": 73,
+    "leetcodeId": 279,
+    "title": "完全平方数",
+    "slug": "perfect-squares",
+    "category": "动态规划",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 122,
+      "score": 120,
+      "snippet": "动态规划：518.零钱兑换II中求的是组合数，动态规划：377. 组合总和 Ⅳ中求的是排列数。 ⽽本题是要求最少硬币数量，硬币是组合数还是排列数都⽆所谓！所以两个for循环先后顺 序怎样都可以！ 这也是我为什么要先讲518.零钱兑换II 然后再讲本题即：322.零钱兑换，这是Carl的良苦⽤ ⼼那。 相信⼤家看完之后，对背包问题中的遍历顺序又了更深的理解了。 完全平⽅数 279.完全平⽅数 题⽬地址：https://leetcode-cn.com/problems/perfect-squares/ 给定正整数 n，找到若⼲个完全平⽅数（⽐如 1, 4, 9, 16, ...）使得它们的和等于 n。你需要 让组成和的完全平⽅数的个数最少。 给你⼀个整数 n ，返回和为 n 的完全平⽅数的 最少数量 。 完全平⽅数 是⼀个整数，其值等于另⼀个整数的平⽅；换句话说，其值等于⼀个整数⾃乘 的积。例如，1、4、9 和 16 都是完全平⽅数，⽽ 3 和 11 不是。 ⽰例 1： 输⼊：n = 12 输出：3 解释：12 = 4 + 4 + 4 ⽰例 2： 输⼊：n = 13 输出：2 解释：13 = 4 + 9 提⽰："
+    }
+  },
+  {
+    "id": 74,
+    "leetcodeId": 283,
+    "title": "移动零",
+    "slug": "move-zeroes",
+    "category": "双指针",
+    "source": null
+  },
+  {
+    "id": 75,
+    "leetcodeId": 287,
+    "title": "寻找重复数",
+    "slug": "find-the-duplicate-number",
+    "category": "技巧",
+    "source": null
+  },
+  {
+    "id": 76,
+    "leetcodeId": 297,
+    "title": "二叉树的序列化与反序列化",
+    "slug": "serialize-and-deserialize-binary-tree",
+    "category": "二叉树",
+    "source": null
+  },
+  {
+    "id": 77,
+    "leetcodeId": 300,
+    "title": "最长递增子序列",
+    "slug": "longest-increasing-subsequence",
+    "category": "动态规划",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 201,
+      "score": 120,
+      "snippet": "最长递增⼦序列 300.最长递增⼦序列 题⽬链接：https://leetcode-cn.com/problems/longest-increasing-subsequence/ 给你⼀个整数数组 nums ，找到其中最长严格递增⼦序列的长度。 ⼦序列是由数组派⽣⽽来的序列，删除（或不删除）数组中的元素⽽不改变其余元素的顺 序。例如，[3,6,2,7] 是数组 [0,3,1,6,2,2,7] 的⼦序列。 ⽰例 1： 输⼊：nums = [10,9,2,5,3,7,101,18] 输出：4 解释：最长递增⼦序列是 [2,3,7,101]，因此长度为 4 。"
+    }
+  },
+  {
+    "id": 78,
+    "leetcodeId": 309,
+    "title": "最佳买卖股票时机含冷冻期",
+    "slug": "best-time-to-buy-and-sell-stock-with-cooldown",
+    "category": "动态规划",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 180,
+      "score": 120,
+      "snippet": "代码随想录知识星球 上万录友在这⾥学习 代码随想录算法训练营 帮助录友⾼效刷完代码随想录。 如果感觉PDF对你有帮助，微信搜索：代码随想录，关注我吧，你会发现相见恨晚！ 最佳买卖股票时机含冷冻期 309.最佳买卖股票时机含冷冻期 题⽬链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cool down/ 给定⼀个整数数组，其中第 i 个元素代表了第 i 天的股票价格 。 设计⼀个算法计算出最⼤利润。在满⾜以下约束条件下，你可以尽可能地完成更多的交易 （多次买卖⼀⽀股票）: 你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。"
+    }
+  },
+  {
+    "id": 79,
+    "leetcodeId": 312,
+    "title": "戳气球",
+    "slug": "burst-balloons",
+    "category": "多维动态规划",
+    "source": null
+  },
+  {
+    "id": 80,
+    "leetcodeId": 322,
+    "title": "零钱兑换",
+    "slug": "coin-change",
+    "category": "动态规划",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 117,
+      "score": 120,
+      "snippet": "这就能考察对背包问题本质的掌握程度，候选⼈是不是刷题背公式，⼀眼就看出来了。 这么⼀连套下来，如果候选⼈都能答出来，相信任何⼀位⾯试官都是⾮常满意的。 本题代码不长，题⽬也很普通，但稍稍⼀进阶就可以考察完全背包，⽽且题⽬进阶的内容在 leetcode上并没有原题，⼀定程度上就可以排除掉刷题党了，简直是⾯试题⽬的绝佳选 择！ 再兑换⼀次零钱 322. 零钱兑换 题⽬链接：https://leetcode-cn.com/problems/coin-change/ 给定不同⾯额的硬币 coins 和⼀个总⾦额 amount。编写⼀个函数来计算可以凑成总⾦额所 需的最少的硬币个数。如果没有任何⼀种硬币组合能组成总⾦额，返回 -1。 你可以认为每种硬币的数量是⽆限的。 ⽰例 1： 输⼊：coins = [1, 2, 5], amount = 11 输出：3 解释：11 = 5 + 5 + 1 ⽰例 2： 输⼊：coins = [2], amount = 3 输出：-1 ⽰例 3： 输⼊：coins = [1], amount = 0 输出：0"
+    }
+  },
+  {
+    "id": 81,
+    "leetcodeId": 337,
+    "title": "打家劫舍 III",
+    "slug": "house-robber-iii",
+    "category": "二叉树",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 149,
+      "score": 120,
+      "snippet": "所以我在本⽂重点强调了情况⼀⼆三是“考虑”的范围，⽽具体房间偷与不偷交给递推公式去 抉择。 这样⼤家就不难理解情况⼆和情况三包含了情况⼀了。 打家劫舍III 337.打家劫舍 III 题⽬链接：https://leetcode-cn.com/problems/house-robber-iii/ 在上次打劫完⼀条街道之后和⼀圈房屋后，⼩偷又发现了⼀个新的可⾏窃的地区。这个地区 只有⼀个⼊⼜，我们称之为“根”。 除了“根”之外，每栋房⼦有且只有⼀个“⽗“房⼦与之相 连。⼀番侦察之后，聪明的⼩偷意识到“这个地⽅的所有房屋的排列类似于⼀棵⼆叉树”。 如果两个直接相连的房⼦在同⼀天晚上被打劫，房屋将⾃动报警。 计算在不触动警报的情况下，⼩偷⼀晚能够盗取的最⾼⾦额。"
+    }
+  },
+  {
+    "id": 82,
+    "leetcodeId": 338,
+    "title": "比特位计数",
+    "slug": "counting-bits",
+    "category": "动态规划",
+    "source": null
+  },
+  {
+    "id": 83,
+    "leetcodeId": 347,
+    "title": "前 K 个高频元素",
+    "slug": "top-k-frequent-elements",
+    "category": "堆",
+    "source": null
+  },
+  {
+    "id": 84,
+    "leetcodeId": 394,
+    "title": "字符串解码",
+    "slug": "decode-string",
+    "category": "栈",
+    "source": null
+  },
+  {
+    "id": 85,
+    "leetcodeId": 399,
+    "title": "除法求值",
+    "slug": "evaluate-division",
+    "category": "图论",
+    "source": null
+  },
+  {
+    "id": 86,
+    "leetcodeId": 406,
+    "title": "根据身高重建队列",
+    "slug": "queue-reconstruction-by-height",
+    "category": "贪心",
+    "source": {
+      "pdf": "「代码随想录」贪心算法专题精讲（v2.0）.pdf",
+      "page": 63,
+      "score": 120,
+      "snippet": "贪⼼算法：根据⾝⾼重建队列 406.根据⾝⾼重建队列 题⽬链接：https://leetcode-cn.com/problems/queue-reconstruction-by-height/ 假设有打乱顺序的⼀群⼈站成⼀个队列，数组 people 表⽰队列中⼀些⼈的属性（不⼀定按顺 序）。每个 people[i] = [hi, ki] 表⽰第 i 个⼈的⾝⾼为 hi ，前⾯ 正好 有 ki 个⾝⾼⼤于或等于 hi 的⼈。 请你重新构造并返回输⼊数组 people 所表⽰的队列。返回的队列应该格式化为数组 queue ， 其中 queue[j] = [hj, kj] 是队列中第 j 个⼈的属性（queue[0] 是排在队列前⾯的⼈）。 ⽰例 1： 输⼊：people = [[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]] 输出：[[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]] 解释： 编号为 0 的⼈⾝⾼为 5 ，没有⾝⾼更⾼或者相同的⼈排在他前⾯。 编号为 1 的⼈⾝⾼为 7 ，没有⾝⾼更⾼或者相同的⼈排在他前⾯。 编号为 2 的⼈⾝⾼为 5 ，有 2 个⾝⾼更⾼或者相同的⼈排在他前⾯，即编号为 0 和 1 的⼈。 编号为 3 的⼈⾝⾼为 6 ，有 1 个⾝⾼更⾼或者相同的⼈排在他前⾯，即编号为 1 的⼈。 编号为 4 的⼈⾝⾼为 4 ，有 4 个⾝⾼更⾼或者相同的⼈排在他前⾯，即编号为 0、1、2、3 的 ⼈。 编号为 5 的⼈⾝⾼为 7 ，有 1 个⾝⾼更⾼或者相同的⼈排在他前⾯，即编号为 1 的⼈。 因此 [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]] 是重新构造后的队列。 ⽰例 2： 输⼊：people = [[6,0],[5,0],[4,0],[3,2],[2,2],[1,4]] 输出：[[4,0],[5,0],[2,2],[3,2],[1,4],[6,0]] 提⽰： 题⽬数据确保队列可以被重建 1 <= people.length <= 2000 0 <= hi <= 10^6 0 <= ki < people.length"
+    }
+  },
+  {
+    "id": 87,
+    "leetcodeId": 416,
+    "title": "分割等和子集",
+    "slug": "partition-equal-subset-sum",
+    "category": "动态规划",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 75,
+      "score": 120,
+      "snippet": "接下来就要开始⽤这两天的理论基础去做⼒扣上的背包⾯试题⽬了，录友们握紧扶⼿，我们 要上⾼速啦！ 分割等和⼦集 416. 分割等和⼦集 题⽬链接：https://leetcode-cn.com/problems/partition-equal-subset-sum/ 题⽬难易：中等 给定⼀个只包含正整数的⾮空数组。是否可以将这个数组分割成两个⼦集，使得两个⼦集的 元素和相等。 注意: 每个数组中的元素不会超过 100 数组的⼤⼩不会超过 200 ⽰例 1: 输⼊: [1, 5, 11, 5] 输出: true 解释: 数组可以分割成 [1, 5, 5] 和 [11]. ⽰例 2: 输⼊: [1, 2, 3, 5] 输出: false 解释: 数组不能分割成两个元素和相等的⼦集. 思路 这道题⽬初步看，是如下两题⼏乎是⼀样的，⼤家可以⽤回溯法，解决如下两题 698.划分为k个相等的⼦集 473.⽕柴拼正⽅形"
+    }
+  },
+  {
+    "id": 88,
+    "leetcodeId": 437,
+    "title": "路径总和 III",
+    "slug": "path-sum-iii",
+    "category": "二叉树",
+    "source": {
+      "pdf": "「代码随想录」二叉树专题精讲（v2.0）.pdf",
+      "page": 129,
+      "score": 100,
+      "snippet": "总结 本题涉及如下⼏点： 路径总和 递归函数什么时候需要返回值 相信很多同学都会疑惑，递归函数什么时候要有返回值，什么时候没有返回值，特别是有的 时候递归函数返回类型为bool类型。那么 接下来我通过详细讲解如下两道题，来回答这个问题： 112. 路径总和 递归求深度的写法，我们在⼆叉树：我平衡么？中详细的分析了深度应该怎么求， ⾼度应该怎么求。 递归中其实隐藏了回溯，在⼆叉树：以为使⽤了递归，其实还隐藏着回溯中讲解了 究竟哪⾥使⽤了回溯，哪⾥隐藏了回溯。 层次遍历，在⼆叉树：层序遍历登场！深度讲解了⼆叉树层次遍历。 所以本题涉及到的点，我们之前都讲解过，这些知识点需要同学们灵活运⽤，这样 就举⼀反三了。 dh. 路径总和 di. 路径总和II if (node->right) que.push(node->right); } } return result; } };"
+    }
+  },
+  {
+    "id": 89,
+    "leetcodeId": 438,
+    "title": "找到字符串中所有字母异位词",
+    "slug": "find-all-anagrams-in-a-string",
+    "category": "滑动窗口",
+    "source": null
+  },
+  {
+    "id": 90,
+    "leetcodeId": 448,
+    "title": "找到所有数组中消失的数字",
+    "slug": "find-all-numbers-disappeared-in-an-array",
+    "category": "技巧",
+    "source": null
+  },
+  {
+    "id": 91,
+    "leetcodeId": 461,
+    "title": "汉明距离",
+    "slug": "hamming-distance",
+    "category": "技巧",
+    "source": null
+  },
+  {
+    "id": 92,
+    "leetcodeId": 494,
+    "title": "目标和",
+    "slug": "target-sum",
+    "category": "动态规划",
+    "source": {
+      "pdf": "「代码随想录」回溯算法精讲（v2.0）.pdf",
+      "page": 23,
+      "score": 130,
+      "snippet": "接下来还需要如下参数： targetSum（int）⽬标和，也就是题⽬中的n。 k（int）就是题⽬中要求k个数的集合。 sum（int）为已经收集的元素的总和，也就是path⾥元素的总和。 startIndex（int）为下⼀层for循环搜索的起始位置。 所以代码如下： 其实这⾥sum这个参数也可以省略，每次targetSum减去选取的元素数值，然后判断如果 targetSum为0了，说明收集到符合条件的结果了，我这⾥为了直观便于理解，还是加⼀个 sum参数。 还要强调⼀下，回溯法中递归函数参数很难⼀次性确定下来，⼀般先写逻辑，需要啥参数 了，填什么参数。 确定终⽌条件 什么时候终⽌呢？ 在上⾯已经说了，k其实就已经限制树的深度，因为就取k个元素，树再往下深了没有意 义。 所以如果path.size() 和 k相等了，就终⽌。 如果此时path⾥收集到的元素和（sum） 和targetSum（就是题⽬描述的n）相同了，就⽤ result收集当前的结果。 所以 终⽌代码如下： vector<vector<int>> result; vector<int> path; void backtracking(int targetSum, int k, int sum, int startIndex) if (path.size() == k) { if (sum == targetSum) result.push_back(path); return; // 如果path.size() == k 但sum != targetSum 直接返回 }"
+    }
+  },
+  {
+    "id": 93,
+    "leetcodeId": 538,
+    "title": "把二叉搜索树转换为累加树",
+    "slug": "convert-bst-to-greater-tree",
+    "category": "二叉树",
+    "source": {
+      "pdf": "「代码随想录」二叉树专题精讲（v2.0）.pdf",
+      "page": 257,
+      "score": 120,
+      "snippet": "把⼆叉搜索树转换为累加树 538.把⼆叉搜索树转换为累加树 题⽬链接：https://leetcode-cn.com/problems/convert-bst-to-greater-tree/ 给出⼆叉 搜索 树的根节点，该树的节点值各不相同，请你将其转换为累加树（Greater Sum Tree），使每个节点 node 的新值等于原树中⼤于或等于 node.val 的值之和。 提醒⼀下，⼆叉搜索树满⾜下列约束条件： 节点的左⼦树仅包含键 ⼩于 节点键的节点。 节点的右⼦树仅包含键 ⼤于 节点键的节点。 左右⼦树也必须是⼆叉搜索树。 ⽰例 1："
+    }
+  },
+  {
+    "id": 94,
+    "leetcodeId": 543,
+    "title": "二叉树的直径",
+    "slug": "diameter-of-binary-tree",
+    "category": "二叉树",
+    "source": null
+  },
+  {
+    "id": 95,
+    "leetcodeId": 560,
+    "title": "和为 K 的子数组",
+    "slug": "subarray-sum-equals-k",
+    "category": "前缀和",
+    "source": null
+  },
+  {
+    "id": 96,
+    "leetcodeId": 581,
+    "title": "最短无序连续子数组",
+    "slug": "shortest-unsorted-continuous-subarray",
+    "category": "技巧",
+    "source": null
+  },
+  {
+    "id": 97,
+    "leetcodeId": 617,
+    "title": "合并二叉树",
+    "slug": "merge-two-binary-trees",
+    "category": "二叉树",
+    "source": {
+      "pdf": "「代码随想录」二叉树专题精讲（v2.0）.pdf",
+      "page": 168,
+      "score": 120,
+      "snippet": "总结 本周我们深度讲解了如下知识点： 如果⼤家⼀路跟下来，⼀定收获满满，如果周末不做这个总结，⼤家可能都不知道⾃⼰收获 满满，啊哈！ 合并两个⼆叉树 617.合并⼆叉树 题⽬地址：https://leetcode-cn.com/problems/merge-two-binary-trees/ 给定两个⼆叉树，想象当你将它们中的⼀个覆盖到另⼀个上时，两个⼆叉树的⼀些节点便会 重叠。 你需要将他们合并为⼀个新的⼆叉树。合并的规则是如果两个节点重叠，那么将他们的值相 加作为节点合并后的新值，否则不为 NULL 的节点将直接作为新⼆叉树的节点。 ⽰例 1: 1. 递归中如何隐藏着回溯 2. 如何通过三层关系确定左叶⼦ 3. 如何通过⼆叉树深度来判断左下⾓的值 4. 递归函数究竟什么时候需要返回值，什么时候不要返回值？ 5. 前序和中序，后序和中序构造唯⼀⼆叉树 6. 使⽤数组构造某⼀特性的⼆叉树"
+    }
+  },
+  {
+    "id": 98,
+    "leetcodeId": 621,
+    "title": "任务调度器",
+    "slug": "task-scheduler",
+    "category": "贪心",
+    "source": null
+  },
+  {
+    "id": 99,
+    "leetcodeId": 647,
+    "title": "回文子串",
+    "slug": "palindromic-substrings",
+    "category": "多维动态规划",
+    "source": {
+      "pdf": "「代码随想录」动态规划专题精讲（v2.0）.pdf",
+      "page": 255,
+      "score": 120,
+      "snippet": "回⽂⼦串 647. 回⽂⼦串 题⽬链接：https://leetcode-cn.com/problems/palindromic-substrings/ 给定⼀个字符串，你的任务是计算这个字符串中有多少个回⽂⼦串。 具有不同开始位置或结束位置的⼦串，即使是由相同的字符组成，也会被视作不同的⼦串。 ⽰例 1： 输⼊：\"abc\" 输出：3 解释：三个回⽂⼦串: \"a\", \"b\", \"c\" ⽰例 2： 输⼊：\"aaa\" 输出：6 解释：6个回⽂⼦串: \"a\", \"a\", \"a\", \"aa\", \"aa\", \"aaa\" 提⽰： 输⼊的字符串长度不会超过 1000 。 暴⼒解法 两层for循环，遍历区间起始位置和终⽌位置，然后判断这个区间是不是回⽂。 时间复杂度：O(n^3) 动态规划"
+    }
+  },
+  {
+    "id": 100,
+    "leetcodeId": 739,
+    "title": "每日温度",
+    "slug": "daily-temperatures",
+    "category": "栈",
+    "source": null
+  }
+]
